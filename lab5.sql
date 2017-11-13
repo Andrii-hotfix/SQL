@@ -26,3 +26,17 @@ SELECT Corporation.Name, Employee.LastName, Employee.Name,Employee.MiddleName, Y
     GROUP BY Corporation.Name
   )
   AND Corporation.Name = 'Apple';
+
+SELECT MIN(COUNT(Employee.Name)), Department.Name
+  FROM Department INNER JOIN Employee ON Department.Id = Employee.Department
+GROUP BY Department.Name;
+
+SELECT Department.Name
+  FROM Department INNER JOIN Employee ON Department.Id = Employee.Department
+  GROUP BY Department.Name
+  HAVING COUNT(Employee.Id) <= ALL(
+    (SELECT COUNT(Employee.Department)
+      FROM Department INNER JOIN Employee On Department.Id = Employee.Department
+    GROUP BY Employee.Department
+  ));
+

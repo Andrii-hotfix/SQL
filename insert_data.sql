@@ -1,18 +1,18 @@
-INSERT INTO DepartmentType (Name) VALUES ('IT');
-INSERT INTO DepartmentType (Name) VALUES ('Management & Marketing');
-
-INSERT INTO Department (Name, DepartmentType) VALUES ('HR', 2);
-INSERT INTO Department (Name, DepartmentType) VALUES ('Development', 1);
-INSERT INTO Department (Name, DepartmentType) VALUES ('SEO', 2);
-INSERT INTO Department (Name, DepartmentType) VALUES ('Management', 2);
-INSERT INTO Department (Name, DepartmentType) VALUES ('Cyber Security', 1);
-
-INSERT INTO PostType (Name) VALUES ('Manager');
-INSERT INTO PostType (Name) VALUES ('Stuff');
-
 INSERT INTO Corporation (Name) VALUES ('Microsoft');
 INSERT INTO Corporation (Name) VALUES ('Apple');
 INSERT INTO Corporation (Name) VALUES ('Google');
+
+INSERT INTO DepartmentType (Name) VALUES ('IT');
+INSERT INTO DepartmentType (Name) VALUES ('Management & Marketing');
+
+INSERT INTO Department (Name, DepartmentType, DepartmentCorp) VALUES ('HR', 2, 1);
+INSERT INTO Department (Name, DepartmentType, DepartmentCorp) VALUES ('Development', 1, 2);
+INSERT INTO Department (Name, DepartmentType, DepartmentCorp) VALUES ('SEO', 2, 3);
+INSERT INTO Department (Name, DepartmentType, DepartmentCorp) VALUES ('Management', 2, 1);
+INSERT INTO Department (Name, DepartmentType, DepartmentCorp) VALUES ('Cyber Security', 1, 2);
+
+INSERT INTO PostType (Name) VALUES ('Manager');
+INSERT INTO PostType (Name) VALUES ('Stuff');
 
 INSERT INTO Post (Name, PostType) VALUES ('Department Lead', 1);
 INSERT INTO Post (Name, PostType) VALUES ('Team Lead', 1);

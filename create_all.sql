@@ -15,8 +15,11 @@ CREATE TABLE Department
   Id INT IDENTITY PRIMARY KEY,
   Name VARCHAR(50) UNIQUE,
   DepartmentType INT NOT NULL,
+  DepartmentCorp INT NOT NULL,
   CONSTRAINT DepartmentTypeForeign FOREIGN KEY
-    (DepartmentType) REFERENCES DepartmentType
+    (DepartmentType) REFERENCES DepartmentType,
+  CONSTRAINT DepartmentCorpForeign FOREIGN KEY
+    (DepartmentCorp) REFERENCES Corporation
 );
 
 CREATE TABLE PostType
