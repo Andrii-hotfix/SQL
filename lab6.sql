@@ -40,3 +40,14 @@ CREATE VIEW EmpListByDepartmentsTypes AS
 SELECT * FROM EmpListByDepartmentsTypes;
 
 DROP VIEW EmpListByDepartmentsTypes;
+
+-- last
+
+CREATE VIEW FairedEmployees AS
+  SELECT Employee.Id, Employee.Name, Employee.MiddleName, Employee.LastName
+  FROM Employee
+  WHERE Employee.EndDate IS NOT NULL;
+
+SELECT * FROM FairedEmployees;
+
+DROP VIEW FairedEmployees;
