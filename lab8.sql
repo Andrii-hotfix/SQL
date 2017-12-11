@@ -32,5 +32,3 @@ INSERT INTO Employee (Name, LastName, MiddleName, Gender, Birthday, Adress, Post
     VALUES (
         'Elena', 'Ivanova', 'Ivanovna', 'f', '01.01.1991', 'Borshahivska st. 129', 2, '01.01.2003', NULL, 2, 2
     );
-
-DELETE FROM Employee WHERE Employee.MiddleName = 'NIKIFOROVA';
