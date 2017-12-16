@@ -8,7 +8,7 @@ CREATE TRIGGER EmployeeTrigger
         AND Employee.LastName = (SELECT  inserted.LastName FROM inserted)
     )
       BEGIN
-        RAISERROR ('Error: This employee allready exists!', 1, 1)
+        RAISERROR('Error: This employee allready exists!', 1, 1)
         ROLLBACK
       END
     ELSE
@@ -30,5 +30,5 @@ INSERT INTO Employee (Name, LastName, MiddleName, Gender, Birthday, Adress, Post
 
 INSERT INTO Employee (Name, LastName, MiddleName, Gender, Birthday, Adress, Post, StartDate, EndDate, Department, Corp)
     VALUES (
-        'Elena', 'Ivanova', 'Ivanovna', 'f', '01.01.1991', 'Borshahivska st. 129', 2, '01.01.2003', NULL, 2, 2
+        'Elena', 'Rotenko', 'Ivanovna', 'f', '01.01.1991', 'Borshahivska st. 129', 2, '01.01.2003', NULL, 2, 2
     );
